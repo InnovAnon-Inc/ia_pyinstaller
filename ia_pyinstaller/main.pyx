@@ -22,10 +22,10 @@ logger           = get_logger()
 ##
 
 def _pyinstaller(project_name:str,)->None:
-	warn_str :str  = str(f'warn-{project_name}.txt')
-	warn_path:Path = Path('build', project_name, warn_str)
-	warn_path.parent.mkdir(parents=True,)# exists_ok=True,)
-	warn_path.touch()
+	#warn_str :str  = str(f'warn-{project_name}.txt')
+	#warn_path:Path = Path('build', project_name, warn_str)
+	#warn_path.parent.mkdir(parents=True,)# exists_ok=True,)
+	#warn_path.touch()
 
 	hook_str :str  = str(f'hook-{project_name}.py')
 	assert Path(hook_str).is_file()
