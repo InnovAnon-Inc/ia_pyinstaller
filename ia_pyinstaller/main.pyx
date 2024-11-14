@@ -36,12 +36,12 @@ def _pyinstaller(project_name:str,)->None:
 		main_str,
 	]
 
-async def main()->None:
+async def _main()->None:
 	project_name:str       = Path().resolve().name
 	assert Path(project_name).is_dir() # module dir
 	args        :List[str] = _pyinstaller(project_name=project_name,)
 	#PyInstaller.__main__.run(args,)
-	result      :str       = await acheck_call(['pyinstaller', *args],)
+	result      :str       = await acheck_output(['pyinstaller', *args],)
 	logger.info('PyInstaller: %s', result,)
 
 def main()->None:

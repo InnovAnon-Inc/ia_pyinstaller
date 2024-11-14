@@ -1,3 +1,4 @@
+ia_check_output
 PyInstaller
 #rich
 structlog
