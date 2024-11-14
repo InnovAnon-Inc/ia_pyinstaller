@@ -12,7 +12,7 @@ from typing                                  import ParamSpec
 import PyInstaller.__main__
 from structlog                               import get_logger
 
-from ia_check_output                         import acheck_output
+#from ia_check_output                         import acheck_output
 
 P     :ParamSpec = ParamSpec('P')
 logger           = get_logger()
@@ -40,9 +40,9 @@ async def _main()->None:
 	project_name:str       = Path().resolve().name
 	assert Path(project_name).is_dir() # module dir
 	args        :List[str] = _pyinstaller(project_name=project_name,)
-	#PyInstaller.__main__.run(args,)
-	result      :str       = await acheck_output(['pyinstaller', *args],)
-	logger.info('PyInstaller: %s', result,)
+	PyInstaller.__main__.run(args,)
+	#result      :str       = await acheck_output(['pyinstaller', *args],)
+	#await logger.ainfo('PyInstaller: %s', result,)
 
 def main()->None:
 	asyncio.run(_main())
