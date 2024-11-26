@@ -4,7 +4,7 @@ services:
     build:
       context:        .
       tags:
-        - ia_pyinstaller:latest
+        - innovanon/ia_pyinstaller:latest
     restart:          no
     logging:
       driver:         syslog   
