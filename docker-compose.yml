@@ -5,9 +5,9 @@ services:
       context:        .
       tags:
         - innovanon/ia_pyinstaller:latest
-        -           ia_pyinstaller:latest
-        - innovanon/ia_pyinstaller
-        -           ia_pyinstaller
+    #    -           ia_pyinstaller:latest
+    #    - innovanon/ia_pyinstaller
+    #    -           ia_pyinstaller
     image:            innovanon/ia_pyinstaller
     restart:          no
     logging:
